@@ -5,6 +5,7 @@ import Button from "primevue/button";
 
 export default {
   name: "perfil-alumno",
+  props: ['id'],
   components: {
     Card,
     Button
@@ -17,7 +18,7 @@ export default {
   },
   created() {
     const api = new AlumnosApiService();
-    api.getAlumnoById("60d5ec49d3b3c8c3f1b3c8e1") // Reemplaza 1 con el ID del alumno que deseas obtener
+    api.getAlumnoById(this.id) // Reemplaza 1 con el ID del alumno que deseas obtener
         .then(response => {
           this.alumno = response.data;
           console.log("Datos del alumno: ", this.alumno)
@@ -43,8 +44,7 @@ export default {
     </template>
 
     <template #footer>
-      <Button label="Editar perfil" />
-    </template>
+      <Button label="Editar perfil" @click="$router.push({ name: 'EditProfile', params: { id: alumno.id } })" />    </template>
   </Card>
 
 
