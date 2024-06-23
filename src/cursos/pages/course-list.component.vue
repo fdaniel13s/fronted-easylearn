@@ -4,6 +4,9 @@ import {CourseApiService} from "../services/course-api.service.js";
 
 export default {
   name: "course-list",
+  props:{
+    studentId: String
+  },
   components: {CourseCardComponent},
   data() {
     return {
@@ -17,11 +20,13 @@ export default {
 
     this.courseService.getAllCourses()
         .then(response => {
-          this.courses = response.data.filter(course => !this.excludedCourses.includes(course._id.$oid));
+          this.courses = response.data.filter(course => !this.excludedCourses.includes(course._id));
+          console.log(this.courses);
         })
         .catch(e => {
           console.log(e);
         });
+
   },
 };
 </script>
@@ -37,15 +42,15 @@ export default {
             <h2 class="Descripcion">Descripcion</h2>
             <h2 class="Precio">Precio</h2>
             <h2 class="Categoria">Categoria</h2>
-            <h2 class="Fecha">Fecha</h2>
             <h2 class="Nivel">Nivel</h2>
           </div>
           <div class="courses">
             <CourseCardComponent
                 class="course-card"
                 v-for="(course, index) in courses"
-                :key="course._id.$oid"
+                :key="course._id"
                 :course="course"
+                :studentId = "this.studentId"
             ></CourseCardComponent>
           </div>
         </div>
@@ -111,7 +116,7 @@ export default {
   justify-content: space-between; /* Alinea los elementos horizontalmente */
   align-items: flex-start; /* Alinea los elementos al inicio */
   flex-wrap: wrap;
-  background-color: #BD3F57;
+  background-color: var(--richblack);
   border-radius: 30px;
   padding: 10px;
   margin-bottom: 5px;

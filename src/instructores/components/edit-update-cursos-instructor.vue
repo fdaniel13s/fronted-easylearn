@@ -3,13 +3,19 @@ import { CursosApiService } from "../../alumnos/services/cursos-api.js";
 
 export default {
   name: "edit-update-cursos-instructor",
+  props: ['id'],
   data() {
     return {
       cursos: [],
       nuevoCurso: {
         titulo: "",
         descripcion: "",
-        // ... otros campos del curso ...
+        instructor: this.id,
+        precio: 0,
+        categoria: "",
+        nivel: "",
+        ultima_actualizacion: new Date()
+
       },
       cursoEditado: null
     };
@@ -28,7 +34,7 @@ export default {
 
     async getCursos() {
       const cursosService = new CursosApiService();
-      this.cursos = await cursosService.getCursosByInstructorId('6659e972ae60856ad081c466').then(
+      this.cursos = await cursosService.getCursosByInstructorId(this.id).then(
         response => {
           return response.data;
         }
@@ -39,7 +45,7 @@ export default {
       const cursosService = new CursosApiService();
       await cursosService.createCurso(this.nuevoCurso);
       alert("Curso creado exitosamente!");
-      this.getCursos(); // Actualiza la lista de cursos
+      await this.getCursos(); // Actualiza la lista de cursos
     }
   },
   created() {
@@ -86,7 +92,9 @@ export default {
     <form @submit.prevent="crearCurso">
       <input type="text" v-model="nuevoCurso.titulo" placeholder="Nombre del curso" required/>
       <input type="text" v-model="nuevoCurso.descripcion" placeholder="Descripción del curso"/>
-      <!-- ... otros campos del formulario ... -->
+      <input type="text" v-model="nuevoCurso.categoria" placeholder="Categoria del curso"/>
+      <input type="number" v-model="nuevoCurso.precio" placeholder="Precio del curso"/>
+      <input type="text" v-model="nuevoCurso.nivel" placeholder="Nivel del curso"/>
       <button type="submit">Crear Curso</button>
     </form>
   </div>
@@ -98,5 +106,12 @@ export default {
   background-color: var(--jade);
   border-radius: 10px;
   padding: 5px;
+}
+input {
+  margin-bottom: 5px;
+  width: 60%;
+}
+button{
+  margin-top:10px;
 }
 </style>

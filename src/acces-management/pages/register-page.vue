@@ -60,17 +60,31 @@ export default {
     </template>
 
     <template #footer>
-      <p>¿Ya tienes una cuenta? <router-link to="/login">Inicia sesión</router-link></p>
+      <p>¿Ya tienes una cuenta? <router-link class="link" to="/login">Inicia sesión</router-link></p>
     </template>
   </pv-card>
 </template>
 
 <style scoped>
 .card-register {
+  display: grid;
+  place-items: center;
+  height: 50vh;
   width: 50%;
   background-color: var(--jade);
   border-radius: 10px;
   padding: 5px;
+  margin: 0 auto;
+}
+
+
+.link{
+  color:white;
+
+}
+
+.link:hover{
+  color: black;
 }
 </style>
 

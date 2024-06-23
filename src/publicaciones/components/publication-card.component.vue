@@ -10,14 +10,16 @@ export default {
   data() {
     return {
       course: null,
+      newComment: ''
     }
   },
   methods: {
     async deletePublication() {
       const apiService = new PublicationApiService();
       try {
-        const response = await apiService.deletePublication(this.publication.id);
+        const response = await apiService.deletePublication(this.publication._id);
         console.log(response.data);
+        this.$emit('publication-deleted', this.publication._id);
       } catch (error) {
         console.error(error);
       }
@@ -25,21 +27,24 @@ export default {
     async createComment() {
       const apiService = new PublicationApiService();
       try {
-        const response = await apiService.createComment(this.publication.id, this.newComment);
-        this.publication.comentarios.push(response.data);
+        const comment = {
+          contenido: this.newComment
+        };
+        console.log(comment);
+        await apiService.createComment(this.publication._id, comment);
+        this.publication.comentarios.push(comment);
         this.newComment = '';
       } catch (error) {
         console.error(error);
       }
-    },
-    async created() {
-      const apiService = new PublicationApiService();
-      try {
-        const response = await apiService.getCourseById(this.publication.curso_id);
-        this.course = response.data;
-      } catch (error) {
-        console.error(error);
-      }
+    }
+  },
+  async created() {
+    const apiService = new PublicationApiService();
+    try {
+
+    } catch (error) {
+      console.error(error);
     }
   }
 }
@@ -47,17 +52,20 @@ export default {
 
 <template>
   <pv-card class="custom-card">
-    <div class="publication-card">
-      <p>{{ publication.contenido }}</p>
-      <div v-for="(comment, index) in publication.comentarios" :key="index">
-        <p>Comentario {{ index + 1 }}: {{ comment.contenido }}</p>
+    <template #content>
+      <div class="publication-card">
+        <p>{{ publication.contenido }}</p>
+        <div v-for="(comment, index) in publication.comentarios" :key="index">
+          <p>Comentario {{ index + 1 }}: {{ comment.contenido }}</p>
+        </div>
+        <div class="botones" >
+          <button @click="deletePublication">Eliminar<i class="button"></i></button>
+          <input class="nuevo-comentario" v-model="newComment" type="text" placeholder="Escribe un nuevo comentario">
+          <button @click="createComment">Enviar comentario</button>
+        </div>
       </div>
-      <div class="botones" >
-        <button @click="deletePublication">Eliminar<i class="button"></i></button>
-        <input class="nuevo-comentario" v-model="newComment" type="text" placeholder="Escribe un nuevo comentario">
-        <button @click="createComment">Enviar comentario</button>
-      </div>
-    </div>
+    </template>
+
   </pv-card>
 </template>
 

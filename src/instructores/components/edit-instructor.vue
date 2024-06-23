@@ -9,7 +9,8 @@ export default {
       email: "",
       name: "",
       surname: "",
-      password: ""
+      password: "",
+      telefono: ""
     };
   },
   methods: {
@@ -19,6 +20,7 @@ export default {
       this.email = userData.data.correo;
       this.name = userData.data.nombre;
       this.surname = userData.data.apellido;
+      this.telefono = userData.data.telefono;
     },
     async updateProfile() {
       const instructorService = new InstructorApiService();
@@ -27,7 +29,8 @@ export default {
         correo: this.email,
         password: this.password,
         nombre: this.name,
-        apellido: this.surname
+        apellido: this.surname,
+        telefono: this.telefono
       }
 
       await instructorService.updateInstructor(this.id, userData);
@@ -60,6 +63,7 @@ export default {
           <input type="text" v-model="surname" placeholder="Apellido"/>
           <input type="email" v-model="email" placeholder="Correo" required/>
           <input type="password" v-model="password" placeholder="Contraseña" required/>
+          <input type="number" v-model="telefono" placeholder="Teléfono"/>
           <button type="submit">Actualizar Perfil</button>
         </form>
         <button @click="deleteProfile" style="background-color: red; color: white;">Eliminar Perfil</button>
@@ -70,9 +74,13 @@ export default {
 
 <style scoped>
 .card-edit-instructor {
-  width: 50%;
-  background-color: var(--jade);
-  border-radius: 10px;
-  padding: 5px;
+    display: grid;
+    place-items: center;
+    height: 60vh;
+    width: 50%;
+    background-color: var(--jade);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 auto;
 }
 </style>

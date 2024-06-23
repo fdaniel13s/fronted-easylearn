@@ -23,7 +23,7 @@ export default {
         apellido: this.surname
       }
 
-      await alumnoService.updateAlumno(this.id, userData);
+      await alumnoService.update(this.id, userData);
       alert("Perfil actualizado exitosamente!");
       console.log("Actualizando perfil del usuario con correo: ", this.email);
 
@@ -63,10 +63,14 @@ export default {
 
 <style scoped>
 .card-edit-profile {
+  display: grid;
+  place-items: center;
+  height: 50vh;
   width: 50%;
-  background-color: var(--jade);
+  background-color: var(--caribben);
   border-radius: 10px;
   padding: 5px;
+  margin: 0 auto;
 }
 
 .delete{

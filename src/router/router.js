@@ -1,7 +1,14 @@
 import {createRouter, createWebHistory} from "vue-router";
-import CourseListComponent from "..//cursos/pages/course-list.component.vue";
-import PublicationListComponent from "..//publicaciones/pages/publication-list.component.vue";
-// ... other imports ...
+import RegisterPage from "../acces-management/pages/register-page.vue";
+import LoginPage from "../acces-management/pages/login-page.vue";
+import HomeInstructor from "../instructores/pages/home-instructor.vue";
+import HomeAlumnos from "../alumnos/pages/home-alumnos.vue";
+import EditProfile from "../alumnos/pages/edit-profile.vue";
+import EditInstructor from "../instructores/components/edit-instructor.vue";
+import PublicationListComponent from "../publicaciones/pages/publication-list.component.vue";
+import CourseListComponent from "../cursos/pages/course-list.component.vue";
+import StudygroupListComponent from "../grupos-estudio/pages/studygroup-list.component.vue";
+import PageNotFound from "../public/page-not-found.vue";
 
 const routes = [
     {
@@ -42,10 +49,22 @@ const routes = [
         component:EditInstructor,
         props: true
     },
-    // ... other routes ...
     { path: '/courses', component: CourseListComponent, meta: { title: 'Courses' } },
-    { path: '/publications', component: PublicationListComponent, meta: { title: 'Publications' } },
-    // Agrega más rutas aquí
+    { path: '/publications',
+        name: 'Publications',
+        component: PublicationListComponent,
+        meta: { title: 'Publications' }
+    },
+    {
+        path: '/grupos-estudio/:id',
+        name: 'GruposEstudio',
+        component: StudygroupListComponent
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: PageNotFound
+    }
 ]
 
 const router = createRouter({

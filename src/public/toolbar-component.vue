@@ -1,35 +1,23 @@
 <template>
-  <div>
     <Toolbar class="Toolbar" fixed>
       <template #start>
         <div class="title">EasyLearn</div> <!-- Agregamos el título aquí -->
         <Button @click="toggleDrawer" class="menu-button">
           ☰
         </Button>
-        <div class="flex-row">
-          <Button v-for="(item, index) in items" :key="item.label" class="p-button-text" :class="item.class" @click="navigateTo(item.to)">
-            {{ item.label }}
-          </Button>
-        </div>
+      </template>
+      <template #center class="center">
+        <Button class="publicaciones" @click="navigateTo('/publications')">Publicaciones</Button>
       </template>
       <template #end>
         <div class="flex-row">
-          <Button v-for="(item, index) in itemsRight" :key="item.label" class="p-button-text" :class="item.class" @click="navigateTo(item.to)">
-            {{ item.label }}
-          </Button>
+
+          <Button class="log-out" @click="navigateTo('/login')">Cerrar Sesión</Button>
+
         </div>
       </template>
     </Toolbar>
 
-    <div class="drawer" :class="{ open: drawer}">
-      <Button v-for="(item, index) in items" :key="item.label" class="p-button-text" :class="item.class" @click="navigateTo(item.to)">
-        {{ item.label }}
-      </Button>
-      <Button v-for="(item, index) in itemsRight" :key="item.label" class="p-button-text" :class="item.class" @click="navigateTo(item.to)">
-        {{ item.label }}
-      </Button>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -76,8 +64,29 @@ export default {
 </script>
 
 <style scoped>
+
+.log-out{
+  background-color: #006D77;
+
+}
+
+.gruposEstudio{
+  margin-right: 1px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.publicaciones{
+  margin-left: 10px;
+}
+
 .Toolbar {
-  position: fixed; /* Posiciona la barra de herramientas en la parte superior */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -90,8 +99,8 @@ export default {
 }
 
 .title {
-  font-size: 1.5em; /* Ajusta el tamaño del título según tus necesidades */
-  margin-right: 20em; /* Añade un margen a la derecha del título */
+  font-size: 1.5em;
+  margin-right: 20px;
 }
 
 .menu-button {

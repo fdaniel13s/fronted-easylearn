@@ -2,26 +2,11 @@ import http from "../../public/services/http-common.js";
 
 export class CourseApiService {
     getAllCourses() {
-        return http.get('/Cursos');
-    }
-
-    getCourseById(id) {
-        return http.get(`/Cursos/${id}`);
-    }
-
-    createCourse(courseResource) {
-        return http.post('/Cursos', courseResource);
-    }
-
-    updateCourse(id, courseResource) {
-        return http.put(`/Cursos/${id}`, courseResource);
+        return http.get('/cursos');
     }
 
     deleteCourse(id) {
-        return http.delete(`/Cursos/${id}`);
+        return http.delete(`/cursos/${id}`);
     }
 
-    findByTitle(title) {
-        return http.get(`/Cursos?title=${title}`);
-    }
 }

@@ -37,9 +37,9 @@ export default {
     </template>
     <template #content>
       <div class="perfil-alumno">
-        <span>{{alumno?.nombre}}  {{alumno?.apellido}}</span>
+        <span>Nos agrada que aprendas con nosotros!</span>
         <p>{{alumno?.descripcion}}</p>
-        <p>Estas aprendiendo actualmente con la maravillosa cantidad de <b>{{alumno?.suscripciones.length}} cursos</b></p>
+        <p>Estas aprendiendo actualmente con la maravillosa cantidad de <b>{{alumno?.cursos.length}} cursos</b></p>
       </div>
     </template>
 
@@ -52,10 +52,14 @@ export default {
 
 <style scoped>
 .card-profile{
+  display: grid;
+  place-items: center;
+  height: 50vh;
   width: 50%;
-  background-color: var(--jade);
+  background-color: var(--caribben);
   border-radius: 10px;
   padding: 5px;
+  margin: 0 auto;
 }
 
 </style>

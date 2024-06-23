@@ -1,28 +1,38 @@
 <script>
 import {CourseApiService} from "../services/course-api.service.js";
+import {AlumnosApiService} from "../../alumnos/services/alumnos-api.js";
 
 export default {
   name: "course-card.component",
   props: {
-    courseId: Number,
     course: Object,
-    index: Number
+    index: Number,
+    studentId: String
   },
   data() {
     return {
-      courseId: 0,
       courseService: null,
+      alumnoService: null
     }
   },
   created() {
-    this.courseId = this.$route.params.id;
     this.courseService = new CourseApiService();
-    console.log(this.courseId);
+    this.alumnoService = new AlumnosApiService();
+    console.log(this.course._id);
+    console.log(this.studentId)
   },
   methods: {
+    async addCourse() {
+      try {
+        console.log(this.course);
+        await this.alumnoService.updateAlumno(this.studentId, this.course ) // Accede al ID del curso a través de la prop `course`
+      } catch (error) {
+        console.error(error);
+      }
+    },
     async deleteCourse() {
       try {
-        await this.courseService.deleteCourse(this.courseId);
+        await this.courseService.deleteCourse(this.course._id); // Accede al ID del curso a través de la prop `course`
         // Actualizar la lista de cursos después de eliminar
       } catch (error) {
         console.error(error);
@@ -30,7 +40,7 @@ export default {
     },
     updateCourse() {
       // Navegar a la página de actualización de curso con el ID del curso
-      this.$router.push(`/update-course/${this.courseId}`);
+      this.$router.push(`/update-course/${this.course._id.$oid}`); // Accede al ID del curso a través de la prop `course`
     },
     createCourse() {
       // Navegar a la página de creación de curso
@@ -39,25 +49,25 @@ export default {
   }
 }
 </script>
-
 <template>
-  <pv-card class="custom-card" style="overflow: hidden">
+  <pv-card class="custom-card" style="">
+    <template #content>
       <div class="container">
         <div class="column">
           <div class="left-container">
-            <p>{{index}}{{ course.titulo }}</p>
+            <p>{{ course.titulo }}</p>
             <p>{{ course.descripcion }}</p>
             <p>{{ course.precio }}</p>
             <p>{{ course.categoria }}</p>
-            <p>{{ course.fecha_creacion.$date }}</p>
             <p>{{ course.nivel }}</p>
           </div>
           <div class="right-container">
-            <button @click="deleteCourse">Eliminar<i class="Eliminar"></i></button>
-            <button @click="createCourse">Crear<i class="Crear"></i></button>
+            <button @click="addCourse">Inscribirme</button>
           </div>
         </div>
       </div>
+    </template>
+
   </pv-card>
 </template>
 

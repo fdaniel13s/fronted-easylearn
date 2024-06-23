@@ -14,7 +14,7 @@ export class PublicationApiService {
     }
 
     createComment(id, comment) {
-        return http.post(`/publicaciones/${id}/comentarios`, { contenido: comment });
+        return http.post(`/publicaciones/${id}/comentarios`, comment);
     }
 
     updatePublication(id, publicationResource) {

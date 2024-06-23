@@ -1,7 +1,6 @@
 <script>
 import { AlumnosApiService } from "../../alumnos/services/alumnos-api.js";
 import { InstructorApiService } from "../../alumnos/services/instructor-api.js"; // Asegúrate de usar la ruta correcta a tu servicio de instructores
-
 export default {
   name: "login-page",
   data() {
@@ -39,7 +38,6 @@ export default {
 <template>
   <pv-card class="card-login">
     <template #content>
-      <div>
         <h2>Iniciar sesión</h2>
         <form @submit.prevent="login">
           <input type="email" v-model="email" placeholder="Correo" required/>
@@ -50,20 +48,35 @@ export default {
           </select>
           <button type="submit">Iniciar sesión</button>
         </form>
-      </div>
     </template>
 
     <template #footer>
-      <p>¿No tienes cuenta? <router-link to="/register">Regístrate</router-link></p>
+      <p >¿No tienes cuenta? <router-link class="link" to="/register">Regístrate</router-link></p>
     </template>
   </pv-card>
 </template>
 
 <style scoped>
+
+
 .card-login {
+  display: grid;
+  place-items: center;
+  height: 50vh;
   width: 50%;
   background-color: var(--jade);
   border-radius: 10px;
   padding: 5px;
+  margin: 0 auto;
 }
+
+.link{
+  color:white;
+}
+
+.link:hover{
+  color: black;
+}
+
+
 </style>
