@@ -1,5 +1,5 @@
 <script>
-import { AlumnosApiService } from "../../alumnos/services/alumnos-api.js";
+import { AlumnosApiService } from "../services/alumnos-api.js";
 import Card from "primevue/card";
 import Button from "primevue/button";
 

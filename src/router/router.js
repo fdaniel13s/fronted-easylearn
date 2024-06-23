@@ -1,18 +1,22 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeAlumnos from '../alumnos/pages/home-alumnos.vue'
-
-const routes = [
-    {
-        path: '/',
-        name: 'Home',
-        component: HomeAlumnos
-    }
-    // Agrega más rutas aquí
-]
+import {createRouter, createWebHistory} from "vue-router";
+import CourseListComponent from "..//cursos/pages/course-list.component.vue";
+import PublicationListComponent from "..//publicaciones/pages/publication-list.component.vue";
+// ... other imports ...
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
-})
+    routes: [
+        // ... other routes ...
+        { path: '/courses', component: CourseListComponent, meta: { title: 'Courses' } },
+        { path: '/publications', component: PublicationListComponent, meta: { title: 'Publications' } },
+        // ... other routes ...
+    ]
+});
 
-export default router
+router.beforeEach((to, from, next) => {
+    let baseTitle = 'EasyLearn';
+    document.title = `${ baseTitle } | ${to.meta["title"]}`;
+    next();
+});
+
+export default router;

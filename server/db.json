@@ -1,0 +1,739 @@
+{
+  "grupos_estudio": [
+    {
+      "_id": {
+        "$oid": "6659f085ae60856ad081c4b0"
+      },
+      "nombre_grupo": "Estudio de Python Avanzado",
+      "descripcion": "Grupo para estudiantes que están avanzando en el curso de Python avanzado.",
+      "fecha_creacion": {
+        "$date": "2023-05-27T10:00:00.000Z"
+      },
+      "miembros": [
+        {
+          "usuario_id": {
+            "$oid": "60d5ec49d3b3c8c3f1b3c8e1"
+          },
+          "fecha_union": {
+            "$date": "2023-05-27T10:00:00.000Z"
+          }
+        },
+        {
+          "usuario_id": {
+            "$oid": "6659e5c8ae60856ad081c459"
+          },
+          "fecha_union": {
+            "$date": "2023-05-27T10:00:00.000Z"
+          }
+        }
+      ],
+      "publicaciones": [
+        {
+          "usuario_id": {
+            "$oid": "60d5ec49d3b3c8c3f1b3c8e1"
+          },
+          "contenido": "¿Alguien tiene problemas con la sección de manejo de excepciones?",
+          "fecha_publicacion": {
+            "$date": "2023-05-27T10:00:00.000Z"
+          },
+          "comentarios": [
+            {
+              "usuario_id": {
+                "$oid": "6659e5c8ae60856ad081c459"
+              },
+              "contenido": "Sí, a mí me costó un poco entenderlo. Podemos revisarlo juntos.",
+              "fecha_comentario": {
+                "$date": "2023-05-27T11:00:00.000Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "665a8890f420086858cb0577"
+      },
+      "nombre_grupo": "Estudio de JavaScript",
+      "descripcion": "Grupo para estudiantes interesados en JavaScript y sus aplicaciones.",
+      "fecha_creacion": {
+        "$date": "2023-06-15T10:00:00.000Z"
+      },
+      "miembros": [
+        {
+          "usuario_id": {
+            "$oid": "60d5ec49d3b3c8c3f1b3c8e1"
+          },
+          "fecha_union": {
+            "$date": "2023-06-15T10:00:00.000Z"
+          }
+        },
+        {
+          "usuario_id": {
+            "$oid": "6659e5c8ae60856ad081c459"
+          },
+          "fecha_union": {
+            "$date": "2023-06-15T10:00:00.000Z"
+          }
+        }
+      ],
+      "publicaciones": [
+        {
+          "usuario_id": {
+            "$oid": "665a7f9fa7373fad33e81fb6"
+          },
+          "contenido": "Estoy teniendo dificultades con las promesas en JavaScript.",
+          "fecha_publicacion": {
+            "$date": "2023-06-16T10:00:00.000Z"
+          },
+          "comentarios": [
+            {
+              "usuario_id": {
+                "$oid": "665a80b3f420086858cb0559"
+              },
+              "contenido": "Puedo ayudarte con eso. Las promesas pueden ser complicadas al principio.",
+              "fecha_comentario": {
+                "$date": "2023-06-16T11:00:00.000Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "665a88fdf420086858cb0579"
+      },
+      "nombre_grupo": "Desarrollo de Aplicaciones Móviles",
+      "descripcion": "Grupo para estudiantes interesados en el desarrollo de aplicaciones móviles.",
+      "fecha_creacion": {
+        "$date": "2023-08-10T10:00:00.000Z"
+      },
+      "miembros": [
+        {
+          "usuario_id": {
+            "$oid": "665a8299f420086858cb055d"
+          },
+          "fecha_union": {
+            "$date": "2023-08-10T10:00:00.000Z"
+          }
+        },
+        {
+          "usuario_id": {
+            "$oid": "665a7f9fa7373fad33e81fb6"
+          },
+          "fecha_union": {
+            "$date": "2023-08-10T10:00:00.000Z"
+          }
+        },
+        {
+          "usuario_id": {
+            "$oid": "60d5ec49d3b3c8c3f1b3c8e1"
+          },
+          "fecha_union": {
+            "$date": "2023-08-10T10:00:00.000Z"
+          }
+        }
+      ],
+      "publicaciones": [
+        {
+          "usuario_id": {
+            "$oid": "6659e5c8ae60856ad081c459"
+          },
+          "contenido": "¿Alguien tiene experiencia con Flutter?",
+          "fecha_publicacion": {
+            "$date": "2023-08-15T10:00:00.000Z"
+          },
+          "comentarios": [
+            {
+              "usuario_id": {
+                "$oid": "665a80b3f420086858cb0559"
+              },
+              "contenido": "Sí, he estado trabajando con Flutter durante un tiempo. ¿En qué necesitas ayuda?",
+              "fecha_comentario": {
+                "$date": "2023-08-15T11:00:00.000Z"
+              }
+            },
+            {
+              "usuario_id": {
+                "$oid": "665a8299f420086858cb055d"
+              },
+              "contenido": "Yo también puedo ayudar. ¿Tienes alguna pregunta específica?",
+              "fecha_comentario": {
+                "$date": "2023-08-15T12:00:00.000Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "666f0ea45d95e663727a8230"
+      },
+      "nombre_grupo": "Aprendiendo Python con Juegos",
+      "descripcion": "Grupo para principiantes en Python y ganas de jugar",
+      "miembros": [],
+      "publicaciones": [],
+      "__v": 0
+    }
+  ],
+  "publicaciones": [
+    {
+      "_id": {
+        "$oid": "6659ef99ae60856ad081c4a9"
+      },
+      "usuario_id": {
+        "$oid": "60d5ec49d3b3c8c3f1b3c8e1"
+      },
+      "contenido": "¡Estoy emocionado de haber completado el curso de intruducción a la programación!",
+      "fecha_publicacion": "2023-05-27T10:00:00Z",
+      "curso_id": "648dfb7a3f8f9c4567890123",
+      "tipo": "curso_completado",
+      "comentarios": [
+        {
+          "usuario_id": {
+            "$oid": "6659e5c8ae60856ad081c459"
+          },
+          "contenido": "¡Felicidades! ¿Qué te pareció el curso?",
+          "fecha_comentario": "2023-05-27T11:00:00Z"
+        }
+      ],
+      "reacciones": [
+        {
+          "usuario_id": {
+            "$oid": "60d5ec49d3b3c8c3f1b3c8e1"
+          },
+          "tipo_reaccion": "like",
+          "fecha_reaccion": "2023-05-27T12:00:00Z"
+        },
+        {
+          "usuario_id": {
+            "$oid": "6659e5c8ae60856ad081c459"
+          },
+          "tipo_reaccion": "encanta",
+          "fecha_reaccion": "2023-05-27T12:30:00Z"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "665ba97920a5cb086221285c"
+      },
+      "usuario_id": {
+        "$oid": "665a80b3f420086858cb0559"
+      },
+      "contenido": "¡Acabo de inscribirme en el curso de Programación Orientada a Objetos!",
+      "fecha_publicacion": "2023-05-27T10:00:00Z",
+      "curso_id": "648dfb7a3f8f9c4567890124",
+      "tipo": "inscripcion_curso",
+      "comentarios": [
+        {
+          "usuario_id": {
+            "$oid": "665a842cf420086858cb0567"
+          },
+          "contenido": "¡Excelente elección! ¿Qué te motiva a tomar este curso?",
+          "fecha_comentario": "2023-05-27T11:00:00Z"
+        }
+      ],
+      "reacciones": [
+        {
+          "usuario_id": {
+            "$oid": "665a842cf420086858cb0567"
+          },
+          "tipo_reaccion": "like",
+          "fecha_reaccion": "2023-05-27T12:00:00Z"
+        },
+        {
+          "usuario_id": {
+            "$oid": "665a80b3f420086858cb0559"
+          },
+          "tipo_reaccion": "encanta",
+          "fecha_reaccion": "2023-05-27T12:30:00Z"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "665ba97920a5cb086221285d"
+      },
+      "usuario_id": {
+        "$oid": "665a80b3f420086858cb0559"
+      },
+      "contenido": "Completé el curso de HTML, CSS y JavaScript y estoy listo para desarrollar mi primer sitio web.",
+      "fecha_publicacion": "2023-05-27T10:00:00Z",
+      "curso_id": "6659e1bb99b0bfbe8d4e3cf5",
+      "tipo": "curso_completado",
+      "comentarios": [
+        {
+          "usuario_id": {
+            "$oid": "665a842cf420086858cb0567"
+          },
+          "contenido": "¡Felicidades! ¿Qué proyecto tienes en mente?",
+          "fecha_comentario": "2023-05-27T11:00:00Z"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "665ba97920a5cb086221285e"
+      },
+      "usuario_id": {
+        "$oid": "665a842cf420086858cb0567"
+      },
+      "contenido": "Recién empeza el curso de Desarrollo Web Full Stack, ¡estoy emocionado por lo que aprenderé!",
+      "fecha_publicacion": "2023-05-27T10:00:00Z",
+      "tipo": "inicio_curso"
+    },
+    {
+      "_id": {
+        "$oid": "665ba97920a5cb086221285f"
+      },
+      "usuario_id": {
+        "$oid": "665a836df420086858cb0563"
+      },
+      "contenido": "Justo lo que necesitaba, un curso para mejorar mis habilidades en programación.",
+      "fecha_publicacion": "2023-05-27T10:00:00Z",
+      "curso_id": "648dfb7a3f8f9c4567890124",
+      "tipo": "curso_recomendado",
+      "reacciones": [
+        {
+          "usuario_id": {
+            "$oid": "665a83f1f420086858cb0565"
+          },
+          "tipo_reaccion": "like",
+          "fecha_reaccion": "2023-05-27T12:00:00Z"
+        },
+        {
+          "usuario_id": {
+            "$oid": "665a842cf420086858cb0567"
+          },
+          "tipo_reaccion": "asombro",
+          "fecha_reaccion": "2023-05-27T12:30:00Z"
+        }
+      ]
+    }
+  ],
+  "Cursos": [
+    {
+      "_id": {
+        "$oid": "648dfb7a3f8f9c4567890123"
+      },
+      "titulo": "Introducción a la Programación",
+      "descripcion": "Un curso basico",
+      "precio": 100,
+      "categoria": "Programación",
+      "fecha_creacion": {
+        "$date": "2024-05-27T00:00:00.000Z"
+      },
+      "ultima_actualizacion":{
+        "$date": "2024-05-28T00:00:00.000Z"
+      },
+      "nivel": "Principiante",
+      "lecciones": [
+        {
+          "titulo": "Variables y Tipos de Datos",
+          "url": "http://example.com/variables_tipos.mp4",
+          "tipo": "video",
+          "recursos": [
+            "http://example.com/ejercicios.pdf",
+            "http://example.com/teoria.pdf",
+            "http://example.com/proyecto.pdf"
+          ]
+        },
+        {
+          "titulo": "Estructuras de Control",
+          "url": "http://example.com/estructuras_control.pdf",
+          "tipo": "documento"
+        }
+      ],
+      "comentarios_valoracion": [
+        {
+          "comentario": "Curso excelente, muy bien explicado.",
+          "estrella": 5
+        },
+        {
+          "comentario": "Buen curso, pero puede mejorar en algunos aspectos.",
+          "estrella": 4
+        }
+      ],
+      "id": "382c"
+    },
+    {
+      "_id": {
+        "$oid": "648dfb7a3f8f9c4567890124"
+      },
+      "titulo": "Programación Orientada a Objetos",
+      "descripcion": "Un curso avanzado sobre programación orientada a objetos.",
+      "precio": 120,
+      "categoria": "Programación",
+      "fecha_creacion": {
+        "$date": "2024-05-27T00:00:00.000Z"
+      },
+      "ultima_actualizacion": {
+        "$date": "2024-05-28T00:00:00.000Z"
+      },
+      "nivel": "Principiante",
+      "lecciones": [
+        {
+          "titulo": "Clases y Objetos",
+          "url": "http://example.com/clasesObjetos.mp4",
+          "tipo": "video",
+          "recursos": [
+            "http://example.com/ejercicios.pdf",
+            "http://example.com/teoria.pdf",
+            "http://example.com/proyecto.pdf"
+          ]
+        },
+        {
+          "titulo": "Herencia y Polimorfismo",
+          "url": "http://example.com/herencia.mp4",
+          "tipo": "video"
+        },
+        {
+          "titulo": "Encapsulamiento y Abstracción",
+          "url": "http://example.com/encapsulamiento_abstraccion.mp4",
+          "tipo": "video"
+        },
+        {
+          "titulo": "Interfaces y Clases Abstractas",
+          "url": "http://example.com/interfaces_clases_abstractas.mp4",
+          "tipo": "video",
+          "recursos": [
+            "http://example.com/ejercicios.pdf",
+            "http://example.com/teoria.pdf",
+            "http://example.com/proyecto.pdf"
+          ]
+        }
+      ],
+      "comentarios_valoracion": [
+        {
+          "comentario": "Curso excelente, muy bien explicado.",
+          "estrella": 5
+        },
+        {
+          "comentario": "Buen curso, pero puede mejorar en algunos aspectos.",
+          "estrella": 4
+        },
+        {
+          "comentario": "Muy buen curso, lo recomiendo.",
+          "estrella": 5
+        },
+        {
+          "comentario": "No me gustó mucho, esperaba más.",
+          "estrella": 3
+        }
+      ],
+      "id": "8cbc"
+    },
+    {
+      "_id": {
+        "$oid": "6659e1bb99b0bfbe8d4e3cf5"
+      },
+      "titulo": "Desarrollo Web con HTML, CSS y JavaScript",
+      "descripcion": "Un curso completo para aprender a desarrollar sitios web.",
+      "precio": 150,
+      "categoria": "Desarrollo Web",
+      "fecha_creacion": {
+        "$date": "2024-05-27T00:00:00.000Z"
+      },
+      "ultima_actualizacion": {
+        "$date": "2024-05-28T00:00:00.000Z"
+      },
+      "nivel": "Intermedio",
+      "lecciones": [
+        {
+          "titulo": "Introducción a HTML",
+          "url": "http://example.com/intro_html.mp4",
+          "tipo": "video",
+          "recursos": [
+            "http://example.com/ejercicios.pdf",
+            "http://example.com/teoria.pdf",
+            "http://example.com/proyecto.pdf"
+          ]
+        },
+        {
+          "titulo": "Introducción a CSS",
+          "url": "http://example.com/intro_css.mp4",
+          "tipo": "video"
+        },
+        {
+          "titulo": "Introducción a JavaScript",
+          "url": "http://example.com/intro_js.mp4",
+          "tipo": "video"
+        },
+        {
+          "titulo": "Proyecto Final",
+          "url": "http://example.com/proyecto_final.mp4",
+          "tipo": "video",
+          "recursos": [
+            "http://example.com/ejercicios.pdf",
+            "http://example.com/teoria.pdf",
+            "http://example.com/proyecto.pdf"
+          ]
+        }
+      ],
+      "comentarios_valoracion": [
+        {
+          "comentario": "Curso excelente, muy bien explicado.",
+          "estrella": 5
+        },
+        {
+          "comentario": "Buen curso, pero puede mejorar en algunos aspectos.",
+          "estrella": 4
+        },
+        {
+          "comentario": "Muy buen curso, lo recomiendo.",
+          "estrella": 5
+        },
+        {
+          "comentario": "No me gustó mucho, esperaba más.",
+          "estrella": 3
+        }
+      ],
+      "id": "82c7"
+    },
+    {
+      "_id": {
+        "$oid": "648dfb7a3f8f9c4567890125"
+      },
+      "titulo": "Desarrollo Web con JavaScript",
+      "descripcion": "El curso más completo que habrá existido acerca de JAVASCRIPT!!! ",
+      "precio": 150,
+      "categoria": "Desarrollo Web",
+      "fecha_creacion": {
+        "$date": "2024-05-29T00:00:00.000Z"
+      },
+      "ultima_actualizacion": {
+        "$date": "2024-05-30T00:00:00.000Z"
+      },
+      "nivel": "Intermedio",
+      "lecciones": [
+        {
+          "titulo": "Fundamentos de HTML",
+          "url": "http://example.com/html_fundamentos.mp4",
+          "tipo": "video",
+          "recursos": [
+            "http://example.com/html_fundamentos.pdf",
+            "http://example.com/html_ejercicios.pdf"
+          ]
+        },
+        {
+          "titulo": "CSS para el Estilo",
+          "url": "http://example.com/css_estilo.pdf",
+          "tipo": "documento"
+        },
+        {
+          "titulo": "JavaScript Básico",
+          "url": "http://example.com/js_basico.mp4",
+          "tipo": "video",
+          "recursos": [
+            "http://example.com/js_basico.pdf",
+            "http://example.com/js_ejercicios.pdf"
+          ]
+        },
+        {
+          "titulo": "Construyendo un Proyecto Web",
+          "url": "http://example.com/proyecto_web.mp4",
+          "tipo": "video",
+          "recursos": [
+            "http://example.com/proyecto_web.pdf",
+            "http://example.com/proyecto_ejercicios.pdf"
+          ]
+        }
+      ],
+      "comentarios_valoracion": [
+        {
+          "comentario": "Un curso muy completo y bien estructurado.",
+          "estrella": 5
+        },
+        {
+          "comentario": "Excelente contenido, pero algunos videos podrían mejorar su calidad.",
+          "estrella": 4
+        }
+      ],
+      "id": "6782"
+    },
+    {
+      "_id": {
+        "$oid": "648dfb7a3f8f9c4567890126"
+      },
+      "titulo": "Introducción a la Inteligencia Artificial",
+      "descripcion": "Un curso introductorio que cubre los conceptos básicos y las aplicaciones de la inteligencia artificial.",
+      "precio": 200,
+      "categoria": "Inteligencia Artificial",
+      "fecha_creacion": {
+        "$date": "2024-06-01T00:00:00.000Z"
+      },
+      "ultima_actualizacion": {
+        "$date": "2024-06-02T00:00:00.000Z"
+      },
+      "nivel": "Principiante",
+      "lecciones": [
+        {
+          "titulo": "Historia de la Inteligencia Artificial",
+          "url": "http://example.com/historia_ia.mp4",
+          "tipo": "video",
+          "recursos": [
+            "http://example.com/historia_ia.pdf",
+            "http://example.com/historia_ia_ejercicios.pdf"
+          ]
+        },
+        {
+          "titulo": "Algoritmos Básicos de IA",
+          "url": "http://example.com/algoritmos_ia.pdf",
+          "tipo": "documento"
+        },
+        {
+          "titulo": "Aprendizaje Automático",
+          "url": "http://example.com/aprendizaje_automatico.mp4",
+          "tipo": "video",
+          "recursos": [
+            "http://example.com/aprendizaje_automatico.pdf",
+            "http://example.com/aprendizaje_automatico_ejercicios.pdf"
+          ]
+        }
+      ],
+      "comentarios_valoracion": [
+        {
+          "comentario": "Gran curso para iniciarse en la IA. Muy informativo.",
+          "estrella": 5
+        },
+        {
+          "comentario": "Buen curso, pero sería mejor con más ejemplos prácticos.",
+          "estrella": 4
+        }
+      ],
+      "id": "8f9d"
+    },
+    {
+      "_id": {
+        "$oid": "66679bc0f37a5592c3431043"
+      },
+      "lecciones": [],
+      "comentarios_valoracion": [],
+      "__v": 0,
+      "id": "7621"
+    },
+    {
+      "_id": {
+        "$oid": "66679c2604fb6abc10ff4adf"
+      },
+      "lecciones": [],
+      "comentarios_valoracion": [],
+      "__v": 0,
+      "id": "cf6c"
+    },
+    {
+      "_id": {
+        "$oid": "66679d5c993caef68f32f6e0"
+      },
+      "lecciones": [],
+      "comentarios_valoracion": [],
+      "__v": 0,
+      "id": "fa9c"
+    },
+    {
+      "_id": {
+        "$oid": "66679e2a993caef68f32f6e2"
+      },
+      "lecciones": [],
+      "comentarios_valoracion": [],
+      "__v": 0,
+      "id": "9a68"
+    },
+    {
+      "_id": {
+        "$oid": "66679e2c993caef68f32f6e4"
+      },
+      "lecciones": [],
+      "comentarios_valoracion": [],
+      "__v": 0,
+      "id": "1400"
+    },
+    {
+      "_id": {
+        "$oid": "66679eb8993caef68f32f6e6"
+      },
+      "lecciones": [],
+      "comentarios_valoracion": [],
+      "__v": 0,
+      "id": "4da9"
+    },
+    {
+      "_id": {
+        "$oid": "66679ec32e85b7d924dcb28f"
+      },
+      "lecciones": [],
+      "comentarios_valoracion": [],
+      "__v": 0,
+      "id": "d7d5"
+    },
+    {
+      "_id": {
+        "$oid": "66679f03f8bc851b67ad7ea3"
+      },
+      "lecciones": [],
+      "comentarios_valoracion": [],
+      "__v": 0,
+      "id": "e96d"
+    },
+    {
+      "_id": {
+        "$oid": "6667a0312893ed11f1965aa4"
+      },
+      "titulo": "Curso de LINUX",
+      "descripcion": "Un curso básico de LINUX",
+      "precio": 100,
+      "categoria": "Sistemas Operativos",
+      "fecha_creacion": {
+        "$date": "2024-05-27T00:00:00.000Z"
+      },
+      "ultima_actualizacion": {
+        "$date": "2024-05-28T00:00:00.000Z"
+      },
+      "nivel": "Principiante",
+      "lecciones": [
+        {
+          "titulo": "Introducción a LINUX",
+          "url": "http://example.com/introduccion_linux.mp4",
+          "tipo": "video",
+          "recursos": [
+            "http://example.com/ejercicios.pdf",
+            "http://example.com/teoria.pdf",
+            "http://example.com/proyecto.pdf"
+          ],
+          "_id": {
+            "$oid": "6667a0312893ed11f1965aa5"
+          }
+        }
+      ],
+      "comentarios_valoracion": [
+        {
+          "comentario": "Curso excelente, muy bien explicado.",
+          "estrella": 5,
+          "_id": {
+            "$oid": "6667a0312893ed11f1965aa6"
+          }
+        }
+      ],
+      "id": "0c17"
+    },
+    {
+      "_id": {
+        "$oid": "666f06dc82c467ef926d4ebf"
+      },
+      "lecciones": [],
+      "comentarios_valoracion": [],
+      "id": "e1ed"
+    },
+    {
+      "_id": {
+        "$oid": "666f06dc82c467ef926d4ec1"
+      },
+      "lecciones": [],
+      "comentarios_valoracion": [],
+      "id": "cd76"
+    }
+  ]
+}
